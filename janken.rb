@@ -30,17 +30,6 @@ def janken
   end
 end
 
-
-next_game = true
-while next_game
-  next_game = janken
-end
-
-acchimuitehoi = false
-while acchimuitehoi
-  acchimuitehoi = yubisashi
-end
-
 def yubisashi
   puts "------------------------"
   puts "あっちむいてー"
@@ -59,6 +48,7 @@ def yubisashi
   if (player_yubi == program_yubi) && (@janken_result == "win")
     puts "あなたの勝利です"
     # return false
+    
   else if (player_yubi == program_yubi) && (@janken_result == "lose")
     puts "あなたの負けです"
     # return false
@@ -67,3 +57,13 @@ def yubisashi
   end
   end
 end
+
+  next_game = true
+  while next_game
+    next_game = janken
+  end
+  
+  acchimuitehoi = false
+  while acchimuitehoi
+    acchimuitehoi = yubisashi
+  end
