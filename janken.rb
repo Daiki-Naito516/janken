@@ -16,20 +16,21 @@ def janken
   
   if player_hand == program_hand
     puts "あいこでー"
-    return true
+    return janken
     
   elsif (player_hand == 0 && program_hand == 1) || (player_hand == 1 && program_hand == 2) || (player_hand == 2 && program_hand == 0)    
-    @janken_result == "win"
+    @janken_result = "win"
     p yubisashi
     # return false
 
   elsif 
-    @janken_result == "lose"
+    player_hand == 3
+    puts "終わります"
+    
+  else 
+    @janken_result = "lose"
     p yubisashi
     # return false
-    
-  else player_hand == 3
-    puts "終わります"
   end
 end
 
