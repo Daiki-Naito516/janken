@@ -1,8 +1,8 @@
-puts "じゃんけん、、、"
-puts "0(グー)1(チョキ)2(パー)3(戦わない)"
 
 
 def janken
+  puts "じゃんけん、、、"
+  puts "0(グー)1(チョキ)2(パー)3(戦わない)"
 
   player_hand = gets.to_i
   program_hand = rand(3)
@@ -19,14 +19,17 @@ def janken
     return true
     
   elsif (player_hand == 0 && program_hand == 1) || (player_hand == 1 && program_hand == 2) || (player_hand == 2 && program_hand == 0)    
-    @janken_result = "win"
-    return false
-    # return yubisashi
+    @janken_result == "win"
+    p yubisashi
+    # return false
+
+  elsif 
+    @janken_result == "lose"
+    p yubisashi
+    # return false
     
-  else
-    @janken_result = "lose"
-    return false
-    # return yubisashi
+  else player_hand == 3
+    puts "終わります"
   end
 end
 
